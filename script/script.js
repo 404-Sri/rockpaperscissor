@@ -42,14 +42,17 @@ function clicked(input)
     switch(gameRules[input][computer_choice]) {
         case 'win':
             result.innerText = 'You win';
+            result.style.cssText = 'background-color: green';
             user_score++;
             break;
         case 'lose':
             result.innerText = 'You lose';
+            result.style.cssText = 'background-color: red';
             computer_score++;
             break;
         case 'draw':    
             result.innerText = 'You draw';
+            result.style.cssText = 'background-color: blue';
             break;
     }
     document.getElementById('computer_score').innerHTML = computer_score;
